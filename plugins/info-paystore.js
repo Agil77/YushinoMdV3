@@ -22,9 +22,6 @@ Jika token benar, maka kamu akan menjadi user premium!
 TOKEN akan direset setiap harinya
 `
 
-await conn.sendMessage(m.chat, listMessage)
-//conn.sendHydrated(m.chat, info, wm, null, sgc, "🌎 Group Official", null,null, [['Owner','.owner']], m)
-}
 
 handler.help = ['sewa', 'premium']
 handler.tags = ['main']

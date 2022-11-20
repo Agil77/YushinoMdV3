@@ -21,6 +21,31 @@ Jika token benar, maka kamu akan menjadi user premium!
 
 TOKEN akan direset setiap harinya
 `
+const sections = [
+   {
+	title: `${htjava} WKWK ✦-------`,
+	rows: [
+	    {title: "🔖 TES"},
+	]
+    }, {
+    title: `${htjava} HEHEHE ✦-------`,
+	rows: [
+	    {title: "🌟 TES"},
+	   
+	]
+    },
+]
+
+const listMessage = {
+  text: info,
+  footer: botdate,
+  title: wm,
+  buttonText: "jangan diklik gada apa apa!",
+  sections
+}
+await conn.sendMessage(m.chat, listMessage)
+//conn.sendHydrated(m.chat, info, wm, null, sgc, "🌎 Group Official", null,null, [['Owner','.owner']], m)
+}
 
 
 handler.help = ['sewa', 'premium']

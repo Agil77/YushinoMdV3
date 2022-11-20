@@ -7,9 +7,9 @@ let handler = async (m, { conn, usedPrefix }) => {
     if (!json.url) throw 'Error!'
     conn.sendButton(m.chat, 'Istrinya Kartun', author, json.url, [['waifu', `${usedPrefix}waifu`]], m)
 }
-handler.help = ['waifu']
+handler.help = ['kdhtyaqnhggy']
 handler.tags = ['anime']
 handler.limit = true
-handler.command = /^(waifu)$/i
+handler.command = /^(kdhtyaqnhggy)$/i
 //MADE IN ERPAN 1140 BERKOLABORASI DENGAN BTS
 export default handler

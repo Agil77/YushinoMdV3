@@ -17,7 +17,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 handler.help = ['addprem [@user] <hari>']
 handler.tags = ['owner']
 handler.command = /^(PjwMnBFTfwS)$/i
-
+handler.private = true
 
 
 export default handler

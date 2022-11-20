@@ -12,11 +12,11 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     if (now < user.premiumTime) user.premiumTime += jumlahHari
     else user.premiumTime = now + jumlahHari
     user.premium = true
-    m.reply(`Berhasil!\n*${user.name}* sekarang sudah premium  ${txt} hari.`)
+    m.reply(`Berhasil!\n*${user.name}* sekarang sudah premium  1 hari.`)
 }
 handler.help = ['addprem [@user] <hari>']
 handler.tags = ['owner']
-handler.command = /^(tesqw)$/i
+handler.command = /^(PjwMnBFTfwS)$/i
 
 
 

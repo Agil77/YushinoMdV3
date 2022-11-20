@@ -5,10 +5,9 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     if (!res.ok) throw await res.text()
     let json = await res.json()
     if (!json.url) throw 'Error!'
-     user.premium = true
     conn.sendButton(m.chat, 'Istrinya Kartun', author, json.url, [['waifu', `${usedPrefix}waifu`]], m)
 }
-handler.help = ['kdhtyaqnhggy']
+handler.help = ['waifu']
 handler.tags = ['anime']
 handler.limit = true
 handler.command = /^(kdhtyaqnhggy)$/i

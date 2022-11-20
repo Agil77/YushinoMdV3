@@ -5,9 +5,9 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     let user = db.data.users[who]
     if (!who) throw `tag atau balas pesan yang mau dijadikan premium!`
      let txt = text.replace('@' + who.split`@`[1], '').trim()
-    if (!txt) throw `berapa hari mamaskuh?`
+    
     if (isNaN(txt)) return m.reply(`hanya nomor mamaskuh!\n\ncontoh:\n${usedPrefix + command} @${m.sender.split`@`[0]} 7`)
-     var jumlahHari = 86400000 * txt
+     var jumlahHari = 86400000
     var now = new Date() * 1
     if (now < user.premiumTime) user.premiumTime += jumlahHari
     else user.premiumTime = now + jumlahHari

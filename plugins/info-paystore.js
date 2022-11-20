@@ -14,7 +14,7 @@ let pv = '50'
 let ppm = '70'
 let info = `
 TOKEN PREMIUM:
-https://telegra.ph/token-premium-11-20
+https://karyawan.co.id/RsHUR2JoA
 
 setelah melewati shortlink, kamu akan mendapatkan token berupa huruf random. copy token tersebut dan paste ke dm chat bot.
 Jika token benar, maka kamu akan menjadi user premium!

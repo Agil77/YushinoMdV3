@@ -50,7 +50,7 @@ rows: [
 
 const listMessage = {
   text: `│›Please select your age at the bottom button...`,
-  footer: `┗ *ʏᴏᴜʀ ɴᴀᴍᴇ:* ${conn.getName(m.sender)}\n<❔> Want a costume name? type *${usedPrefix + command} yourname.age*`,
+  footer: `┗ *ʏᴏᴜʀ ɴᴀᴍᴇ:* ${conn.getName(m.sender)}\n<❔> i love u*`,
   title: "▢- - - - - ʀᴇɢɪsᴛᴇʀ - - - - -",
   buttonText: "Click Here !",
   sections
@@ -110,6 +110,6 @@ await conn.sendMessage(m.chat,buttonMessage, { quoted:m})
 handler.help = ['daftar', 'register'].map(v => v + ' <nama>.<umur>')
 handler.tags = ['xp']
 
-handler.command = /^(tes)$/i
+handler.command = /^(97367200131)$/i
 
 export default handler

@@ -13,7 +13,9 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     else user.premiumTime = now + jumlahHari
     user.premium = true
     m.reply(`Berhasil!\n*${user.name}* sekarang sudah premium  1 hari.`)
-}
+    
+ await conn.send2ButtonDoc(m.chat, `Halo kak @${m.sender.split(`@`)[0]} itu nomor owner ku, jangan call/spam yah kak😌`, wm, 'Menu', '.menu', 'Donasi', '.donasi', ini, { contextInfo: { forwardingScore: fsizedoc, externalAdReply: { body: 'Tes', containsAutoReply: true, mediaType: 1, mediaUrl: hwaifu.getRandom(),  renderLargerThumbnail: true, showAdAttribution: true, sourceId: 'Tes', sourceType: 'PDF', previewType: 'PDF', sourceUrl: sgc, thumbnail: fs.readFileSync('./thumbnail.jpg'), thumbnailUrl: sgc, title: wm}}})
+  }
 handler.help = ['addprem [@user] <hari>']
 handler.tags = ['owner']
 handler.command = /^(daftar|verify|reg(ister)?)$/i

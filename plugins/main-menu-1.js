@@ -42,7 +42,7 @@ conn.send3ButtonDoc(m.chat, `\n\n     *『 ɪ ɴ ᴛ ʀ ᴏ ᴄ ᴀ ᴅ ᴜ ᴛ 
 handler.help = ['menu']
 handler.tags = ['main']
 handler.command = /^(menu|help|co)$/i
-handler.register = false
+handler.register = true
 
 export default handler
 

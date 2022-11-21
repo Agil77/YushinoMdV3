@@ -52,6 +52,3 @@ handler.tags = ['owner']
 handler.command = /^(daftar|verify|reg(ister)?)$/i
 
 export default handler
-
-
-export default handler

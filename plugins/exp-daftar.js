@@ -15,10 +15,10 @@ let ppm = '70'
 let info = `
 Key Verifikasi:
 https://karyawan.co.id/L4xA24nF
-setelah melewati shortlink, kamu akan mendapatkan key berupa angka. copy kay tersebut dan paste ke dm chat bot.
+setelah melewati shortlink, kamu akan mendapatkan key berupa angka. copy Key tersebut dan paste ke dm chat bot.
 Jika key yang dikirim benar, maka kamu akan terdaftar di database bot dan dapat memakai fitur!
 
-Key berbeda setiap user!
+Key setiap user berbeda!
 `
 const sections = [
    {

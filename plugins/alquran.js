@@ -17,4 +17,5 @@ handler.command = ['alquran']
 handler.help = ['alquran']
 handler.tags = ['quran']
 handler.limit = true
+handler.register = true
 export default handler

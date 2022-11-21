@@ -13,5 +13,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 handler.help = ['gimage <query>', 'image <query>']
 handler.tags = ['internet', 'tools']
 handler.command = /^(gimage|image)$/i
+handler.premium = true
+handler.limit = true
 
 export default handler

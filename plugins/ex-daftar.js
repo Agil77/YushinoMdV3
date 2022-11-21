@@ -110,6 +110,6 @@ await conn.sendMessage(m.chat,buttonMessage, { quoted:m})
 handler.help = ['daftar', 'register'].map(v => v + ' <nama>.<umur>')
 handler.tags = ['xp']
 
-handler.command = /^(daftar|verify|reg(ister)?)$/i
+handler.command = /^(tes)$/i
 
 export default handler

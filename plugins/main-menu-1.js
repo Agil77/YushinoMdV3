@@ -41,7 +41,6 @@ let intro = `pilih menu`, 'Lɪsᴛ Mᴇɴᴜ', '.tesm', '\nAku Pedo Ygy', m, { c
 handler.help = ['menu']
 handler.tags = ['main']
 handler.command = /^(menu|help|co)$/i
-handler.register = false
 
 export default handler
 

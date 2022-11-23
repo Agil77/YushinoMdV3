@@ -2,8 +2,8 @@ const cooldown = 604800000
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
     let who
-    if (new Date - user.premium < cooldown) throw `You have already claimed this daily claim!, wait for *${((user.premium + cooldown) - new Date()).toTimeString()}*`
     if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : false
+    if (new Date - user.premium < cooldown) throw `You have already claimed this daily claim!, wait for *${((user.premium + cooldown) - new Date()).toTimeString()}*`
     else who = m.chat
     let user = db.data.users[who]
     if (!who) throw `tag atau balas pesan yang mau dijadikan premium!`

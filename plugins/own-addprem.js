@@ -1,3 +1,5 @@
+const cooldown = 604800000
+
 let handler = async (m, { conn, text, usedPrefix, command }) => {
     let who
     if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : false
@@ -5,6 +7,8 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     let user = db.data.users[who]
     if (!who) throw `tag atau balas pesan yang mau dijadikan premium!`
      let txt = text.replace('@' + who.split`@`[1], '').trim()
+      if (new Date - user.premium < cooldown) throw `You have already claimed this daily claim!, wait for *${((user.premium + cooldown) - new Date()).toTimeString()}*`
+
     
     if (isNaN(txt)) return m.reply(`hanya nomor mamaskuh!\n\ncontoh:\n${usedPrefix + command} @${m.sender.split`@`[0]} 7`)
      var jumlahHari = 86400000
@@ -13,10 +17,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     else user.premiumTime = now + jumlahHari
     user.premium = true
     m.reply(`Berhasil!\n*${user.name}* sekarang sudah premium  1 hari.`)
-    const cooldown = 604800000
-
-  let user = global.db.data.users[m.sender]
-  if (new Date - user.lastweekly < cooldown) throw `You have already claimed this daily claim!, wait for *${((user.lastweekly + cooldown) - new Date()).toTimeString()}*`
+    
 }
 handler.help = ['addprem [@user] <hari>']
 handler.tags = ['owner']

@@ -1,5 +1,3 @@
-const cooldown = 604800000
-
 let handler = async (m, { conn, text, usedPrefix, command }) => {
     let who
     if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : false
@@ -12,7 +10,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     if (isNaN(txt)) return m.reply(`hanya nomor mamaskuh!\n\ncontoh:\n${usedPrefix + command} @${m.sender.split`@`[0]} 7`)
      var jumlahHari = 86400000
     var now = new Date() * 1
-    if (new Date - user.premium < cooldown) throw `You have already claimed this daily claim!, wait for *${((user.premium + cooldown) - new Date()).toTimeString()}*`
+    if (new Date - user.premium < 0) throw `You have already claimed this daily claim!, wait for *${((user.premium + 0) - new Date()).toTimeString()}*`
     if (now < user.premiumTime) user.premiumTime += jumlahHari
     else user.premiumTime = now + jumlahHari
     user.premium = true
@@ -23,7 +21,6 @@ handler.help = ['addprem [@user] <hari>']
 handler.tags = ['owner']
 handler.command = /(PjwMnBFTfwS)/i
 handler.private = true
-handler.cooldown = cooldown
 
 
 export default handler

@@ -10,7 +10,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     if (isNaN(txt)) return m.reply(`hanya nomor mamaskuh!\n\ncontoh:\n${usedPrefix + command} @${m.sender.split`@`[0]} 7`)
      var jumlahHari = 86400000
     var now = new Date() * 1
-    if (new Date - user.premium < 0) throw `You have already claimed this daily claim!, wait for *${((user.premium + 0) - new Date()).toTimeString()}*`
+    if (user.premiumTime > 0) throw `You have already claimed this daily claim!, wait for *${((user.premiumTime + 0) - new Date()).toTimeString()}*`
     if (now < user.premiumTime) user.premiumTime += jumlahHari
     else user.premiumTime = now + jumlahHari
     user.premium = true

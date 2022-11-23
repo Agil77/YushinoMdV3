@@ -9,7 +9,6 @@ handler.premium = true
 handler.limit = true
 
 handler.fail = null
-handler.register = true
 
 export default handler
 

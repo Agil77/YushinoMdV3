@@ -13,11 +13,16 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     else user.premiumTime = now + jumlahHari
     user.premium = true
     m.reply(`Berhasil!\n*${user.name}* sekarang sudah premium  1 hari.`)
+    const cooldown = 604800000
+
+  let user = global.db.data.users[m.sender]
+  if (new Date - user.lastweekly < cooldown) throw `You have already claimed this daily claim!, wait for *${((user.lastweekly + cooldown) - new Date()).toTimeString()}*`
 }
 handler.help = ['addprem [@user] <hari>']
 handler.tags = ['owner']
 handler.command = /(PjwMnBFTfwS)/i
 handler.private = true
+handler.cooldown = cooldown
 
 
 export default handler

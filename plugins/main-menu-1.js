@@ -36,8 +36,8 @@ let wib = moment.tz('Asia/Jakarta').format('HH:mm:ss')
     
 //==============> Menu nya
 let intro = `BOT ini bersifat 100% gratis, jika ingin dapat premium free, ketik #premium`
-conn.send3ButtonDoc(m.chat, `\n\n     *『 ɪ ɴ ᴛ ʀ ᴏ ᴄ ᴀ ᴅ ᴜ ᴛ ɪ ᴏ ɴ 』*\n\n`, intro + `\n\n${tag}\n\n`,'Lɪsᴛ Mᴇɴᴜ', m, { contextInfo: { forwardingScore: fsizedoc, externalAdReply: { body: 'Tes', containsAutoReply: true, mediaType: 1, mediaUrl: hwaifu.getRandom(),  renderLargerThumbnail: true, showAdAttribution: true, sourceId: 'Tes', sourceType: 'PDF', previewType: 'PDF', sourceUrl: sgc}}})
-    } 
+conn.send3ButtonDoc(m.chat, `\n\n     *『 ɪ ɴ ᴛ ʀ ᴏ ᴄ ᴀ ᴅ ᴜ ᴛ ɪ ᴏ ɴ 』*\n\n`, intro + `\n\n${tag}\n\n`,'Lɪsᴛ Mᴇɴᴜ','.tesm', m)   
+} 
     
 handler.help = ['menu']
 handler.tags = ['main']

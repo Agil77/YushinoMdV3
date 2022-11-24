@@ -1,19 +1,22 @@
+let handler = async (m, { conn }) => {
 
-import fetch from 'node-fetch'
-let handler = async(m, { conn, text, usedPrefix, command }) => {
-let pp = await conn.profilePictureUrl(m.chat).catch(_ => null)
 
-let krtu = `☰⃟⟣⟔ Yᴏᴜʀ Cᴀʀᴅ Iɴᴛʀᴏ ⟓⟢⃟
-┇⃟⟣⟜ *Nama:* 
-┇⃟⟣⟜ *Umur:* 
-┇⃟⟣⟜ *Alamat:*
-┇⃟⟣⟜ *Hobi:*
-┇⃟⟣⟜ *Pasangan:*
-┖┈┈┈╼╸╸╸╴╴╴ ╳
+let krtu = `0ཻུ۪۪ꦽꦼ̷⸙‹•══════════════♡᭄
+│       *「 Kartu Intro 」*
+│ *Nama     :* 
+│ *Gender   :* 
+│ *Umur      :* 
+│ *Hobby    :* 
+│ *Kelas      :* 
+│ *Asal         :* 
+│ *Agama    :* 
+│ *Status     :* 
+╰═════ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙
+http://bīt.ly/ᯤ
 `
- // Tambah sendiri kalo mau
+conn.fakeReply(m.chat, krtu, '0@s.whatsapp.net', wm)
 }
 handler.command = /^(intro)$/i
+handler.group = true
 
 export default handler
-
